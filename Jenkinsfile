@@ -15,6 +15,10 @@ node('docker'){
     //clean job workspace
     sh 'rm -rf *'
    
+    echo "$GIT_BRANCH"
+    echo "$GIT_REPO_NAME"
+    echo "$GIT_URL"
+   
     stage 'build'
     //Run build inside maven container
     docker.image('maven:3.3.3-jdk-8').inside('-v '+ workspaceNode + ':' + workspaceNode + ' -v ' + dataVolume + ":" + dataVolume) 
