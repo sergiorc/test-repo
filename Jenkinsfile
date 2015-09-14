@@ -15,9 +15,9 @@ node('docker'){
     //clean job workspace
     sh 'rm -rf *'
    
-    echo '$GIT_BRANCH'
-    echo '$GIT_REPO_NAME'
-    echo '$GIT_URL'
+    echo "${GIT_BRANCH}"
+    echo "${GIT_REPO_NAME}"
+    echo "${GIT_URL}"
    
     stage 'build'
     //Run build inside maven container
