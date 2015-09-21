@@ -8,7 +8,7 @@ def host= '172.22.4.39'
 def port = '8083'
 def version = null
 def branchName = currentBranch()
-def developmentHost = tseo-runtime.gft.com
+def developmentHost = 'tseo-runtime.gft.com'
 def image
 
 node('docker'){
